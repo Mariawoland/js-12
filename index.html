@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>JS 12</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #ccc;
+        }
+
+        p,
+        #warwera {
+            color: #333;
+            font-family: calibri;
+            font-size: 23px;
+            padding: 15px 0;
+            line-height: 140%;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        #raodenoba,
+        #gilaki {
+            height: 40px;
+            width: 150px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            outline: none;
+            margin: 4px;
+            font-size: 17px;
+            font-weight: 500;
+            font-family: calibri;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p>რამდენჯერ გინდათ პროგრამამ "Hello World" დაწეროს?</p>
+
+    <div>
+
+        <input id="raodenoba" type="number" />
+        <input id="gilaki" type="button" value="დაწერე" />
+
+    </div>
+
+    <div id="warwera"></div>
+
+    <script>
+
+        document.getElementById('gilaki').onclick = function () {
+
+            var raodenoba = parseInt(document.getElementById('raodenoba').value);
+
+            var warwera = document.getElementById('warwera');
+
+            warwera.innerHTML = '';
+
+            for (var i = 1; i <= raodenoba; i++) {
+
+                var item = document.createElement('div');
+
+                item.innerHTML = "Hello World" + '</br>';
+
+                warwera.appendChild(item);
+
+            }
+
+        };
+
+    </script>
+
+</body>
+
+</html>
